@@ -8,9 +8,10 @@ public abstract class Enemy implements Mortal {
     protected int health;
     protected int damage;
 
-    public Enemy(int health) {
+    public Enemy(int health, int damage) {
         this.health = health;
         this.maxHealth = health;
+        this.damage = damage;
     }
 
     public float getHealth() {
