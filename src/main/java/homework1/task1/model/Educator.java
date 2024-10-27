@@ -1,6 +1,7 @@
 package homework1.task1.model;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Educator extends Human {
     private ArrayList<Course> courses;

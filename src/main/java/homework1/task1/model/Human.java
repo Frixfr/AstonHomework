@@ -1,6 +1,8 @@
 package homework1.task1.model;
 
-public class Human {
+import java.util.Objects;
+
+public abstract class Human {
     private String name;
     private String lastName;
     private int age;
@@ -42,5 +44,18 @@ public class Human {
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return age == human.age && Objects.equals(name, human.name) && Objects.equals(lastName, human.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, lastName, age);
     }
 }
