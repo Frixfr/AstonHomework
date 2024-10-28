@@ -4,7 +4,7 @@ import homework2.Consts;
 
 public class Zombie extends Enemy {
     private static final int REVIVE_CHANCE = 10;
-    private static final int BASE_DAMAGE = 7;
+    private static final int BASE_DAMAGE = 2;
 
     public Zombie(int health) {
         super(health, BASE_DAMAGE);

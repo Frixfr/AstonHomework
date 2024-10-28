@@ -32,12 +32,16 @@ public abstract class Hero implements Mortal {
 
     @Override
     public void attack(Mortal mortal) {
-        mortal.takeDamage(damage);
+        if (isAlive()) {
+            mortal.takeDamage(damage);
+        }
     }
 
     @Override
     public void takeDamage(int damage) {
-        health = health >= damage ? health - damage : Consts.MINIMAL_HEALTH;
+        if (isAlive()) {
+            health = health >= damage ? health - damage : Consts.MINIMAL_HEALTH;
+        }
     }
 
     @Override

@@ -1,7 +1,5 @@
 package homework2.heroes;
 
-import homework2.Mortal;
-
 public class Warrior extends Hero {
     private static final int MAX_HEALTH = 25;
     private static final int BASE_DAMAGE = 7;
