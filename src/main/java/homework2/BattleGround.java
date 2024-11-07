@@ -16,6 +16,6 @@ public class BattleGround {
     }
 
     private static Mortal winner(Mortal mortal, Mortal mortal2) {
-        return mortal.isAlive()?mortal:mortal2;
+        return mortal.isAlive() ? mortal : mortal2;
     }
 }
